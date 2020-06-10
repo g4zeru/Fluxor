@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ValueBinding Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ValueBinding" class="dashAnchor"></a>
+    <a title="ValueBinding Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Fluxor Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/FluxorOrg/Fluxor"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Fluxor Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ValueBinding Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../testing-reducers.html">Testing Reducers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../testing-selectors.html">Testing Selectors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../testing-effects.html">Testing Effects</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Store.html">Store</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Store.html">Store</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Actions.html">Actions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Action.html">Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ActionTemplate.html">ActionTemplate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AnonymousAction.html">AnonymousAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IdentifiableAction.html">IdentifiableAction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Reducers.html">Reducers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Reducer.html">Reducer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ReduceOn.html">ReduceOn</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Selectors.html">Selectors</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SelectorProtocol.html">SelectorProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Selector.html">Selector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Selector1.html">Selector1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Selector2.html">Selector2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Selector3.html">Selector3</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Selector4.html">Selector4</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Selector5.html">Selector5</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Effects.html">Effects</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Effects.html">Effects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Effect.html">Effect</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Publisher.html">Publisher</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Debugging.html">Debugging</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Interceptor.html">Interceptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PrintInterceptor.html">PrintInterceptor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Using%20Fluxor%20with%20SwiftUI.html">Using Fluxor with SwiftUI</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ObservableValue.html">ObservableValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ValueBinding.html">ValueBinding</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Test%20Support.html">Test Support</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MockStore.html">MockStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/EffectRunner.html">EffectRunner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TestInterceptor.html">TestInterceptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TestInterceptor/WaitingError.html">– WaitingError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ValueBinding</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ValueBinding</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt">UpdateValue</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>An <code>ValueBinding</code> can be used as a two-way connection between a slice of the <code><a href="../Classes/Store.html">Store</a></code> and a <code>View</code>.
+The <code>current</code> property will always hold the current <code>Value</code> in the <code>State</code> and when
+one of the <code>update</code> functions are called, an <code><a href="../Protocols/Action.html">Action</a></code> is dispatched on the <code><a href="../Classes/Store.html">Store</a></code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingC7currentxvp"></a>
+                    <a name="//apple_ref/swift/Property/current" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingC7currentxvp">current</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current value. This will change everytime the <code>State</code> in the <code><a href="../Classes/Store.html">Store</a></code> changes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">current</span><span class="p">:</span> <span class="kt">Value</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingC5store8selector14actionTemplateACyxq_G0A05StoreCyqd__qd_0_G_AH8SelectorCyqd__xGAH06ActionI0Vyq_Gxctcr0_lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(store:selector:actionTemplate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingC5store8selector14actionTemplateACyxq_G0A05StoreCyqd__qd_0_G_AH8SelectorCyqd__xGAH06ActionI0Vyq_Gxctcr0_lufc">init(store:<wbr>selector:<wbr>actionTemplate:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes the <code>ValueBinding</code> with a <code><a href="../Classes/Selector.html">Selector</a></code>, a closure returning an <code><a href="../Structs/ActionTemplate.html">ActionTemplate</a></code>
+and the <code><a href="../Classes/Store.html">Store</a></code> from where to select and dispatch <code><a href="../Protocols/Action.html">Action</a></code>s.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">State</span><span class="p">,</span> <span class="kt">Environment</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">store</span><span class="p">:</span> <span class="kt"><a href="../Classes/Store.html">Store</a></span><span class="o">&lt;</span><span class="kt">State</span><span class="p">,</span> <span class="kt">Environment</span><span class="o">&gt;</span><span class="p">,</span>
+                                           <span class="nv">selector</span><span class="p">:</span> <span class="kt">Fluxor</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="o">&lt;</span><span class="kt">State</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
+                                           <span class="nv">actionTemplate</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ActionTemplate.html">ActionTemplate</a></span><span class="o">&lt;</span><span class="kt">UpdateValue</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>store</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/Store.html">Store</a></code> to select from and dispatch <code><a href="../Protocols/Action.html">Action</a></code>s</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>selector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/Selector.html">Selector</a></code>s to use for selecting</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>actionTemplateForValue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure used to decide which<code><a href="../Structs/ActionTemplate.html">ActionTemplate</a></code> to use
+                                for dispatching an <code><a href="../Protocols/Action.html">Action</a></code> when the value changes</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingC5store8selector14actionTemplateACyxq_G0A05StoreCyqd__qd_0_G_AH8SelectorCyqd__xGAH06ActionI0Vyq_Gtcr0_lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(store:selector:actionTemplate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingC5store8selector14actionTemplateACyxq_G0A05StoreCyqd__qd_0_G_AH8SelectorCyqd__xGAH06ActionI0Vyq_Gtcr0_lufc">init(store:<wbr>selector:<wbr>actionTemplate:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes the <code>ValueBinding</code> with a <code><a href="../Classes/Selector.html">Selector</a></code>, a closure returning an <code><a href="../Structs/ActionTemplate.html">ActionTemplate</a></code>
+and the <code><a href="../Classes/Store.html">Store</a></code> from where to select and dispatch <code><a href="../Protocols/Action.html">Action</a></code>s.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">State</span><span class="p">,</span> <span class="kt">Environment</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">store</span><span class="p">:</span> <span class="kt"><a href="../Classes/Store.html">Store</a></span><span class="o">&lt;</span><span class="kt">State</span><span class="p">,</span> <span class="kt">Environment</span><span class="o">&gt;</span><span class="p">,</span>
+                                                       <span class="nv">selector</span><span class="p">:</span> <span class="kt">Fluxor</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="o">&lt;</span><span class="kt">State</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
+                                                       <span class="nv">actionTemplate</span><span class="p">:</span> <span class="kt"><a href="../Structs/ActionTemplate.html">ActionTemplate</a></span><span class="o">&lt;</span><span class="kt">UpdateValue</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>store</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/Store.html">Store</a></code> to select from and dispatch <code><a href="../Protocols/Action.html">Action</a></code>s</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>selector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/Selector.html">Selector</a></code>s to use for selecting</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>actionTemplate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Structs/ActionTemplate.html">ActionTemplate</a></code> to use for dispatching an <code><a href="../Protocols/Action.html">Action</a></code> when the value changes</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60UpdateValue%60%20%3D%3D%20%60Void%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `UpdateValue` == `Void`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60UpdateValue%60%20%3D%3D%20%60Void%60"></a>
+                  <h3 class="section-name"><p>Available where <code>UpdateValue</code> == <code>Void</code></p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingCAAytRs_rlE7binding0bC00E0VyxGvp"></a>
+                    <a name="//apple_ref/swift/Property/binding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingCAAytRs_rlE7binding0bC00E0VyxGvp">binding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>Binding</code> to use in SwiftUI Views. When the View sets the <code>Binding</code> it wil automatically dispatch an <code><a href="../Protocols/Action.html">Action</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">binding</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingCAAytRs_rlE6updateyyF"></a>
+                    <a name="//apple_ref/swift/Method/update()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingCAAytRs_rlE6updateyyF">update()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update the value by dispatching an <code><a href="../Protocols/Action.html">Action</a></code> based on the current value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">update</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60UpdateValue%60%20%3D%3D%20%60Value%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `UpdateValue` == `Value`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60UpdateValue%60%20%3D%3D%20%60Value%60"></a>
+                  <h3 class="section-name"><p>Available where <code>UpdateValue</code> == <code>Value</code></p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingCAAq_RszrlE7binding0bC00E0VyxGvp"></a>
+                    <a name="//apple_ref/swift/Property/binding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingCAAq_RszrlE7binding0bC00E0VyxGvp">binding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>Binding</code> to use in SwiftUI Views. When the View sets the <code>Binding</code> it wil automatically dispatch an <code><a href="../Protocols/Action.html">Action</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">binding</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingCAAq_RszrlE6update5valueyx_tF"></a>
+                    <a name="//apple_ref/swift/Method/update(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingCAAq_RszrlE6update5valueyx_tF">update(value:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update the value by dispatching an <code><a href="../Protocols/Action.html">Action</a></code> with the given value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">UpdateValue</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value to use for updating</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%20%3D%3D%20%60Bool%60%2C%20%60UpdateValue%60%20%3D%3D%20%60Bool%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value` == `Bool`, `UpdateValue` == `Bool`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%20%3D%3D%20%60Bool%60%2C%20%60UpdateValue%60%20%3D%3D%20%60Bool%60"></a>
+                  <h3 class="section-name"><p>Available where <code>Value</code> == <code>Bool</code>, <code>UpdateValue</code> == <code>Bool</code></p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingCAASbRszSbRs_rlE6toggleyyF"></a>
+                    <a name="//apple_ref/swift/Method/toggle()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingCAASbRszSbRs_rlE6toggleyyF">toggle()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update the value by dispatching an <code><a href="../Protocols/Action.html">Action</a></code> with the opposite value of the current.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">toggle</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingCAASbRszSbRs_rlE6enableyyF"></a>
+                    <a name="//apple_ref/swift/Method/enable()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingCAASbRszSbRs_rlE6enableyyF">enable()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enable the value by dispatching an <code><a href="../Protocols/Action.html">Action</a></code> with <code>true</code> as <code>payload</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">enable</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingCAASbRszSbRs_rlE7disableyyF"></a>
+                    <a name="//apple_ref/swift/Method/disable()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingCAASbRszSbRs_rlE7disableyyF">disable()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Disable the value by dispatching an <code><a href="../Protocols/Action.html">Action</a></code> with <code>false</code> as <code>payload</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">disable</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%20%3D%3D%20%60Bool%60%2C%20%60UpdateValue%60%20%3D%3D%20%60Void%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value` == `Bool`, `UpdateValue` == `Void`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%20%3D%3D%20%60Bool%60%2C%20%60UpdateValue%60%20%3D%3D%20%60Void%60"></a>
+                  <h3 class="section-name"><p>Available where <code>Value</code> == <code>Bool</code>, <code>UpdateValue</code> == <code>Void</code></p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingCAASbRszytRs_rlE6toggleyyF"></a>
+                    <a name="//apple_ref/swift/Method/toggle()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingCAASbRszytRs_rlE6toggleyyF">toggle()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update the value by dispatching an <code><a href="../Protocols/Action.html">Action</a></code> with the opposite value of the current.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">toggle</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingCAASbRszytRs_rlE6enableyyF"></a>
+                    <a name="//apple_ref/swift/Method/enable()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingCAASbRszytRs_rlE6enableyyF">enable()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enable the value by dispatching an <code><a href="../Protocols/Action.html">Action</a></code> from the <code>enableActionTemplate</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">enable</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingCAASbRszytRs_rlE7disableyyF"></a>
+                    <a name="//apple_ref/swift/Method/disable()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingCAASbRszytRs_rlE7disableyyF">disable()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Disable the value by dispatching an <code><a href="../Protocols/Action.html">Action</a></code> from the <code>disableActionTemplate</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">disable</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13FluxorSwiftUI12ValueBindingCAASbRszytRs_rlE6update5valueySb_tF"></a>
+                    <a name="//apple_ref/swift/Method/update(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13FluxorSwiftUI12ValueBindingCAASbRszytRs_rlE6update5valueySb_tF">update(value:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update the value by dispatching an <code><a href="../Protocols/Action.html">Action</a></code> with the given value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Value</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value to use for updating</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2020 under <a class="link" href="https://github.com/FluxorOrg/Fluxor/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
