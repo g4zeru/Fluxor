@@ -12,20 +12,7 @@ import Foundation
 
  `Action`s are dispatched on the `Store`.
  */
-public protocol Action: Encodable {
-    /**
-     To enable encoding of the `Action` this helper function is needed.
-
-     `JSONEncoder` can't encode an `Encodable` type unless it has the specific type.
-         By using an `extension` of the `Action` we have this specific type and can encode it.
-     */
-    func encode(with encoder: JSONEncoder) -> Data?
-}
-
-public extension Action {
-    func encode(with encoder: JSONEncoder) -> Data? {
-        return try? encoder.encode(self)
-    }
+public protocol Action {
 }
 
 /**

@@ -9,16 +9,6 @@ import XCTest
 
 class ActionTests: XCTestCase {
     /// Is it possible to encode an `Action`?
-    func testEncoding() {
-        // Given
-        let action = TestAction(increment: 42)
-        let encoder = JSONEncoder()
-        // When
-        let data = action.encode(with: encoder)!
-        let json = String(data: data, encoding: .utf8)!
-        // Then
-        XCTAssertEqual(json, #"{"increment":42}"#)
-    }
 
     /// Is it possible to create an `ActionTemplate` without payload type?
     func testCreateActionTemplate() {
